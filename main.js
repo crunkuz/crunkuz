@@ -31,14 +31,14 @@ const getTotalFollowers = () => userData.followers;
 
 const getTotalContributions = async () => {
   let count = 0;
-
   for (let c = 0; c < repoList.length; ++c) {
     const { data: contributors } = await axios.get(
       `/repos/${USERNAME}/${repoList[c]["name"]}/contributors`
     );
-    for (let contributor in contributors) {
-      if (contributor["login"] === USERNAME) {
-        count += contributor["contributions"];
+
+    for (let c = 0; c < contributors.length; ++c) {
+      if (contributors[c]["login"] === USERNAME) {
+        count += contributors[c]["contributions"];
       }
     }
   }
@@ -49,10 +49,10 @@ const PLACEHOLDERS = {
   STARS: getTotalStars(),
   REPOS: getTotalRepos(),
   FOLLOWERS: getTotalFollowers(),
-  COMMITS: getTotalContributions(),
+  COMMITS: await getTotalContributions(),
 };
 
-const processUpdateFile = (inputPath,outputPath) => {
+const processUpdateFile = (inputPath, outputPath) => {
   fs.readFile(inputPath, "utf8", (err, data) => {
     if (err) {
       return console.log(err);
@@ -79,6 +79,6 @@ const processUpdateFile = (inputPath,outputPath) => {
 //   TotalFollowers: getTotalFollowers(),
 //   TotalContributions: await getTotalContributions(),
 // });
-processUpdateFile("TEMPLATE.md", 'README.md');
+processUpdateFile("TEMPLATE.md", "README.md");
 
-processUpdateFile("assets/banner.svg", "banner.svg")
+processUpdateFile("assets/banner.svg", "banner.svg");
