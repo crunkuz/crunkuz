@@ -79,6 +79,6 @@ const processUpdateFile = (inputPath,outputPath) => {
 //   TotalFollowers: getTotalFollowers(),
 //   TotalContributions: await getTotalContributions(),
 // });
-processUpdateFile("templates/1.md", 'README.md');
+processUpdateFile("TEMPLATE.md", 'README.md');
 
-processUpdateFile("assets/input/card-v2.svg", "assets/output/card-v2.svg")
+processUpdateFile("assets/banner.svg", "banner.svg")
