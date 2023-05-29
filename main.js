@@ -52,10 +52,10 @@ const PLACEHOLDERS = {
   COMMITS: getTotalContributions(),
 };
 
-const processUpdateFile = (path) => {
-  fs.readFile(path, "utf8", (err, data) => {
+const processUpdateFile = (inputPath,outputPath) => {
+  fs.readFile(inputPath, "utf8", (err, data) => {
     if (err) {
-      console.log(err);
+      return console.log(err);
     }
 
     let template = data;
@@ -63,14 +63,12 @@ const processUpdateFile = (path) => {
       const value = PLACEHOLDERS[key];
       template = template.replaceAll("{{" + key + "}}", String(value));
     }
-    fs.writeFile(path, template, (err) => {
-      if (err)
-        console.log(err);
-      else {
-        console.log("File written successfully\n");
-        console.log("The written has the following contents:");
-        console.log(fs.readFileSync("books.txt", "utf8"));
+    fs.writeFile(outputPath, template, (err) => {
+      if (err) {
+        return console.log(err);
       }
+      console.log("File written successfully\n");
+      console.log("The written has the following contents:");
     });
   });
 };
@@ -81,4 +79,6 @@ const processUpdateFile = (path) => {
 //   TotalFollowers: getTotalFollowers(),
 //   TotalContributions: await getTotalContributions(),
 // });
-processUpdateFile('templates/1.md');
+processUpdateFile("templates/1.md", 'README.md');
+
+processUpdateFile("assets/input/card-v2.svg", "assets/output/card-v2.svg")
