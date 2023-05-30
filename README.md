@@ -1,4 +1,4 @@
-<iframe src="https://embed.lottiefiles.com/animation/4891"></iframe>
+<img src="cuzknothz.svg" width="100%" />
 <div>
 	<img src="https://img.shields.io/badge/21-STARS-8cecff?style=for-the-badge">
 	<img src="https://img.shields.io/badge/17-REPOS-f2e174?style=for-the-badge">
