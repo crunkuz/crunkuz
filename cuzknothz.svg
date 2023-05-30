@@ -694,6 +694,9 @@
                             fill="black" />
                     </g>
                 </g>
+                <text xmlns="http://www.w3.org/2000/svg" id="200" fill="white" xml:space="preserve"
+                    style="white-space: pre" font-family="Segoe UI" font-size="14" font-weight="500"
+                    letter-spacing="0em"><tspan x="609" y="360.297">{{VISITORS}}</tspan></text>
                 <g id="contribution">
                     <rect id="Rectangle 1_2" x="421" y="336" width="50" height="37" fill="#555555" />
                     <rect id="Rectangle 2_2" x="471" y="336" width="116" height="37" fill="#8CECFF" />
@@ -735,6 +738,9 @@
                             fill="black" />
                     </g>
                 </g>
+                <text xmlns="http://www.w3.org/2000/svg" id="200_2" fill="white"
+                    xml:space="preserve" style="white-space: pre" font-family="Segoe UI"
+                    font-size="14" font-weight="500" letter-spacing="0em"><tspan x="434" y="360.297">{{COMMITS}}</tspan></text>
                 <g id="follower">
                     <rect id="Rectangle 3" x="275" y="336" width="45" height="37" fill="#555555" />
                     <rect id="Rectangle 2_3" x="320" y="336" width="93" height="37" fill="#FF9EB6" />
@@ -768,6 +774,10 @@
                             fill="black" />
                     </g>
                 </g>
+                <text xmlns="http://www.w3.org/2000/svg" id="2" fill="white" xml:space="preserve"
+                    style="white-space: pre" font-family="Segoe UI" font-size="14" font-weight="600"
+                    letter-spacing="0em"><tspan x="293" y="360.297">{{FOLLOWERS}}</tspan></text>
+
                 <g id="repo">
                     <rect id="Rectangle 3_2" x="161" y="336" width="45" height="37" fill="#555555" />
                     <rect id="Rectangle 2_4" x="206" y="336" width="61" height="37" fill="#F2E174" />
@@ -789,8 +799,13 @@
                             fill="black" />
                     </g>
                 </g>
+                <text xmlns="http://www.w3.org/2000/svg" id="20" fill="white" xml:space="preserve"
+                    style="white-space: pre" font-family="Segoe UI" font-size="14" font-weight="600"
+                    letter-spacing="0em"><tspan x="175" y="360.297">{{REPOS}}</tspan></text>
+
                 <g id="star">
                     <rect id="Rectangle 1_3" x="46" y="336" width="45" height="37" fill="#555555" />
+
                     <rect id="Rectangle 2_5" x="91" y="336" width="62" height="37" fill="#8CECFF" />
                     <g id="STARS">
                         <path
@@ -810,6 +825,10 @@
                             fill="black" />
                     </g>
                 </g>
+                <text xmlns="http://www.w3.org/2000/svg" id="20_2" fill="white" xml:space="preserve"
+                    style="white-space: pre" font-family="Segoe UI" font-size="14" font-weight="600"
+                    letter-spacing="0em"><tspan x="60" y="360.297">{{STARS}}</tspan></text>
+
             </g>
         </g>
     </g>

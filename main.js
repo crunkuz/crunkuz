@@ -83,4 +83,4 @@ const processUpdateFile = (inputPath, outputPath) => {
   });
 };
 
-processUpdateFile("TEMPLATE.md", "README.md");
+processUpdateFile("cuzknothz.svg", "banner.svg");
