@@ -45,11 +45,21 @@ const getTotalContributions = async () => {
   return count;
 };
 
+const getTotalVisitors = async () => {
+  const {
+    data: { total },
+  } = await _axios.get(
+    "https://api.visitorbadge.io/api/status?path=https://github.com/cuzknothz/cuzknothz"
+  );
+  return total;
+};
+
 const PLACEHOLDERS = {
   STARS: getTotalStars(),
   REPOS: getTotalRepos(),
   FOLLOWERS: getTotalFollowers(),
   COMMITS: await getTotalContributions(),
+  VISITORS: await getTotalVisitors(),
 };
 
 const processUpdateFile = (inputPath, outputPath) => {
@@ -73,12 +83,4 @@ const processUpdateFile = (inputPath, outputPath) => {
   });
 };
 
-// console.log("INFO", {
-//   TotalStars: getTotalStars(),
-//   TotalRepos: getTotalRepos(),
-//   TotalFollowers: getTotalFollowers(),
-//   TotalContributions: await getTotalContributions(),
-// });
 processUpdateFile("TEMPLATE.md", "README.md");
-
-processUpdateFile("assets/banner.svg", "banner.svg");
