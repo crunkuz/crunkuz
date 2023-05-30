@@ -1,4 +1,4 @@
-<img src="banner.svg" width="100%" />
+<img src="cuzknothz.svg" width="100%" />
 <div>
 	<img src="https://img.shields.io/badge/21-STARS-8cecff?style=for-the-badge">
 	<img src="https://img.shields.io/badge/15-REPOS-f2e174?style=for-the-badge">
