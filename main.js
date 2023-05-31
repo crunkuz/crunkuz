@@ -20,7 +20,7 @@ const {
 const getTotalStars = () => {
   let count = 0;
   for (let c = 0; c < repoList.length; ++c) {
-    count += repoList[c]["stargazers_count"];
+    count += repoList[c].stargazers_count;
   }
   return count;
 };
@@ -33,12 +33,12 @@ const getTotalContributions = async () => {
   let count = 0;
   for (let c = 0; c < repoList.length; ++c) {
     const { data: contributors } = await axios.get(
-      `/repos/${USERNAME}/${repoList[c]["name"]}/contributors`
+      `/repos/${USERNAME}/${repoList[c].name}/contributors`
     );
 
     for (let c = 0; c < contributors.length; ++c) {
-      if (contributors[c]["login"] === USERNAME) {
-        count += contributors[c]["contributions"];
+      if (contributors[c].login === USERNAME) {
+        count += contributors[c].contributions;
       }
     }
   }
@@ -71,7 +71,7 @@ const processUpdateFile = (inputPath, outputPath) => {
     let template = data;
     for (let key in PLACEHOLDERS) {
       const value = PLACEHOLDERS[key];
-      template = template.replaceAll("{{" + key + "}}", String(value));
+      template = template.replaceAll("{{" + key + "}}", '' + value);
     }
     fs.writeFile(outputPath, template, (err) => {
       if (err) {
