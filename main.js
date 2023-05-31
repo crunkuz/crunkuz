@@ -77,8 +77,7 @@ const processUpdateFile = (inputPath, outputPath) => {
       if (err) {
         return console.log(err);
       }
-      console.log("File written successfully\n");
-      console.log("The written has the following contents:");
+      console.log("DONE");
     });
   });
 };
