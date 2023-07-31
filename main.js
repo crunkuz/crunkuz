@@ -71,7 +71,7 @@ const processUpdateFile = (inputPath, outputPath) => {
     let template = data;
     for (let key in PLACEHOLDERS) {
       const value = PLACEHOLDERS[key];
-      template = template.replaceAll("{{" + key + "}}", '' + value);
+      template = template.replaceAll("{{" + key + "}}", "" + value);
     }
     fs.writeFile(outputPath, template, (err) => {
       if (err) {
